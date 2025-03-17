@@ -17,5 +17,6 @@
   },
   "type": "library",
   "dependencies": {
+    "com.unity.visualscripting": "1.9.6"
   }
 }

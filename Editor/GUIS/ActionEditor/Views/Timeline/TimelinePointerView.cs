@@ -1,6 +1,4 @@
 ﻿using NBC.ActionEditor.Events;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 
 namespace NBC.ActionEditor

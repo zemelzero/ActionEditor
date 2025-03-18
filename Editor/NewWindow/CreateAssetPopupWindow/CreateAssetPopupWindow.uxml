@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Label text="创建时间轴" name="lblTitle" style="-unity-font-style: bold; font-size: 13px;" />
+    <ui:VisualElement name="rootBox">
+        <ui:DropdownField label="创建类型" name="dfAssetTypes" />
+        <ui:TextField picking-mode="Ignore" label="时间轴名称" value="filler text" name="tfTimeAxisName" />
+        <ui:Button text="创建" display-tooltip-when-elided="true" name="btnCreate" />
+        <ui:Button text="重置" display-tooltip-when-elided="true" name="btnReset" />
+    </ui:VisualElement>
+</ui:UXML>

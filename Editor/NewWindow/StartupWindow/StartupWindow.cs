@@ -16,6 +16,8 @@ namespace NBC.ActionEditor
 
         public void CreateGUI()
         {
+            InitializeAll();
+
             var root = rootVisualElement;
 
             var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/ActionEditor/Editor/NewWindow/StartupWindow/StartupWindow.uxml");
@@ -33,7 +35,9 @@ namespace NBC.ActionEditor
 
         private void OnBtnCreateTimelineMouseUp(MouseUpEvent evt)
         {
-
+            VisualElement root = rootVisualElement;
+            Button myButton = root.Q<Button>("btnCreateTimeline");
+            UnityEditor.PopupWindow.Show(myButton.worldBound, new CreateAssetPopupWindow());
         }
 
         private void OnBtnEditorPreferenceMouseUp(MouseUpEvent evt)
@@ -41,6 +45,29 @@ namespace NBC.ActionEditor
             VisualElement root = rootVisualElement;
             Button myButton = root.Q<Button>("btnEditorPreference");
             UnityEditor.PopupWindow.Show(myButton.worldBound, new PreferencePopupWindow());
+        }
+
+        private void OnEnable()
+        {
+            InitializeAll();
+        }
+
+        private void InitializeAll()
+        {
+            Lan.Load();
+            Styles.Load();
+            Prefs.InitializeAssetTypes();
+            App.OnInitialize?.Invoke();
+            //停止播放
+            if (App.AssetData != null)
+            {
+                if (!Application.isPlaying)
+                {
+                    // App.Stop(true);
+                }
+            }
+
+            // WillRepaint = true;
         }
     }
 }

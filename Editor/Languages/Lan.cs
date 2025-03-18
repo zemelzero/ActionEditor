@@ -79,7 +79,7 @@ namespace NBC.ActionEditor
         public static string Title = "行为时间轴编辑器";
         public static string CreateAsset = "创建时间轴";
         public static string SelectAsset = "选择时间轴";
-        public static string Seeting = "编辑器配置";
+        public static string Setting = "编辑器配置";
 
 
         //**********  Crate Window *********

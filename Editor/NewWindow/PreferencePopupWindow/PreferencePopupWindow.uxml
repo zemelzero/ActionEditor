@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="rootBox" style="justify-content: center; flex-direction: column;">
+        <ui:Label name="lblTitle" text="编辑器首选项" style="-unity-font-style: bold; font-size: 15px;" />
+        <ui:VisualElement name="optionalBox">
+            <ui:DropdownField label="语言" choices="中文,English" index="0" name="dfLanguage" />
+            <uie:EnumField label="步长模式" value="Seconds,Frames" name="enumStrideMode" />
+            <ui:DropdownField label="步长" choices="0.001,0.01,0.1" index="1" name="dfStride" />
+            <ui:Toggle label="剪辑吸附" name="tgClipSnapping" value="true" />
+            <ui:Toggle label="滚轮缩放" name="tgScrollWheelZoom" value="true" />
+            <ui:VisualElement name="fileChooseBox" style="flex-direction: row; flex-shrink: 0;">
+                <ui:TextField picking-mode="Ignore" label="选择文件" value="filler text" name="tfSelectFile" readonly="true" style="flex-grow: 1; flex-direction: row;" />
+                <ui:Button text="选择" display-tooltip-when-elided="true" name="btnSelectFile" style="flex-grow: 0.1;" />
+            </ui:VisualElement>
+            <ui:SliderInt picking-mode="Ignore" label="自动保存时间" value="5" high-value="120" low-value="5" show-input-field="true" name="siAutoSaveTime" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

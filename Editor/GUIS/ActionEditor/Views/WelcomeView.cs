@@ -43,7 +43,7 @@ namespace NBC.ActionEditor
                 ObjectSelectorWindow.ShowObjectPicker<TextAsset>(null, App.OnObjectPickerConfig, "Assets/");
             }
 
-            if (DrawCenteredButton(Lan.Seeting))
+            if (DrawCenteredButton(Lan.Setting))
             {
                 PreferencesWindow.Show(new Rect(Styles.ScreenWidth - 5 - 400, 25, 400,
                     Styles.ScreenHeight - 70));

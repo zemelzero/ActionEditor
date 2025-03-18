@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Box style="align-items: center; justify-content: center; height: 450px; min-height: 100%; flex-grow: 1;">
+        <ui:VisualElement style="background-image: resource(&apos;nbc/Logo&apos;); width: 128px; height: 128px;" />
+        <ui:Label text="行为时间轴编辑器" display-tooltip-when-elided="true" style="font-size: 20px; -unity-font-style: bold;" />
+        <ui:VisualElement style="max-height: 20px; min-height: 10px;" />
+        <ui:Button text="创建时间轴" display-tooltip-when-elided="true" name="btnCreateTimeline" style="max-width: 200px; max-height: 50px; min-width: 200px; min-height: 35px; font-size: 15px; margin-top: 1px; -unity-font-style: normal;" />
+        <ui:Button text="选择时间轴" display-tooltip-when-elided="true" name="btnSelectTimeline" style="max-width: 200px; max-height: 50px; min-width: 200px; min-height: 35px; font-size: 15px; margin-top: 1px;" />
+        <ui:Button text="编辑器配置" display-tooltip-when-elided="true" name="btnEditorPreference" style="max-width: 200px; max-height: 50px; min-width: 200px; min-height: 35px; font-size: 15px; margin-top: 1px;" />
+    </ui:Box>
+</ui:UXML>
